@@ -22,7 +22,7 @@ An **AI-powered tool** that allows users to upload product images, remove backgr
 |------------|-------------|--------------|
 | ![UI Screenshot](assets/ui.png) | ![Input Product](assets/input.png) | ![Customized Output](assets/output.png) |
 
-> Make sure the images `ui.png`, `input.png`, and `output.png` are inside an `assets/` folder in your repo.
+> Make sure the images `ui.png`, `input.jpg`, and `output.png` are inside an `assets/` folder in your repo.
 
 ---
 
