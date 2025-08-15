@@ -24,9 +24,9 @@ An **AI-powered tool** that allows users to upload product images, remove backgr
 <td><b>📤 Output Design</b></td>
 </tr>
 <tr>
-<td><img src="assets/ui.jpg" width="250"></td>
+<td><img src="assets/ui.png" width="250"></td>
 <td><img src="assets/input.jpg" width="250"></td>
-<td><img src="assets/output.jpg" width="250"></td>
+<td><img src="assets/output.png" width="250"></td>
 </tr>
 </table>
 
@@ -36,9 +36,9 @@ An **AI-powered tool** that allows users to upload product images, remove backgr
 ## 🛠️ Tech Stack / Skills
 **Python, PyQt5, PIL, Image Processing, rembg, Stable Diffusion, PyTorch, GUI Development, GPU Optimization, Product Customization**
 
-```
 
 ## 📂 Project Structure
+```
 
 
 AI-Product-Customizer-project/
