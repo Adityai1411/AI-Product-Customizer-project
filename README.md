@@ -15,14 +15,21 @@ An **AI-powered tool** that allows users to upload product images, remove backgr
 - **GPU acceleration** for faster processing (if available)
 
 ---
+## 📸 Project Demo
 
-## 🖥️ Project UI & Samples
+<table>
+<tr>
+<td><b>🖥️ User Interface</b></td>
+<td><b>📥 Input Product</b></td>
+<td><b>📤 Output Design</b></td>
+</tr>
+<tr>
+<td><img src="assets/ui.jpg" width="250"></td>
+<td><img src="assets/input.jpg" width="250"></td>
+<td><img src="assets/output.jpg" width="250"></td>
+</tr>
+</table>
 
-| Project UI | Input Image | Output Image |
-|------------|-------------|--------------|
-| ![UI Screenshot](assets/ui.png) | ![Input Product](assets/input.jpg) | ![Customized Output](assets/output.png) |
-
-> Make sure the images `ui.png`, `input.jpg`, and `output.png` are inside an `assets/` folder in your repo.
 
 ---
 
