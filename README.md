@@ -116,9 +116,4 @@ Pull requests are welcome! If you find a bug or want to add features, please ope
 
 If you like this project, **give it a star** on GitHub!
 
-```
 
----
-
-Do you want me to also **add clickable badges** at the top for Python version, license, and stars so your GitHub page looks more professional?
-```
