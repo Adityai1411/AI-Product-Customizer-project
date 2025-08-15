@@ -1,12 +1,10 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QFileDialog, QLineEdit, QVBoxLayout, QMessageBox
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QFont
 from background_remove import remove_bg
 from customize_product import apply_customization
-
 from utils import ensure_dir
 import os
-from PIL import Image
 
 PREVIEW_DIR = "outputs/previews"
 FINAL_DIR = "outputs/final_designs"
@@ -17,22 +15,35 @@ class ProductCustomizerApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("AI Product Customizer")
-        self.setGeometry(100, 100, 600, 600)
+        self.setGeometry(100, 100, 700, 700)  
         self.layout = QVBoxLayout()
 
-        self.upload_btn = QPushButton("Upload Product Image")
+        font = QFont("Arial", 14)  
+
+        # Upload Button
+        self.upload_btn = QPushButton("📤 Upload Product Image")
+        self.upload_btn.setFont(font)
+        self.upload_btn.setFixedHeight(50)
         self.upload_btn.clicked.connect(self.upload_image)
         self.layout.addWidget(self.upload_btn)
 
+        # Prompt Input
         self.prompt_input = QLineEdit()
-        self.prompt_input.setPlaceholderText("Enter customization prompt here...")
+        self.prompt_input.setFont(font)
+        self.prompt_input.setPlaceholderText("✏️ Enter customization prompt here...")
+        self.prompt_input.setFixedHeight(40)
         self.layout.addWidget(self.prompt_input)
 
-        self.run_btn = QPushButton("Customize Product")
+        # Run Button
+        self.run_btn = QPushButton("✨ Customize Product")
+        self.run_btn.setFont(font)
+        self.run_btn.setFixedHeight(50)
         self.run_btn.clicked.connect(self.customize)
         self.layout.addWidget(self.run_btn)
 
-        self.preview_label = QLabel("Preview will appear here")
+        # Preview Label
+        self.preview_label = QLabel("🖼️ Preview will appear here")
+        self.preview_label.setFont(QFont("Arial", 12))
         self.layout.addWidget(self.preview_label)
 
         self.setLayout(self.layout)
@@ -42,7 +53,7 @@ class ProductCustomizerApp(QWidget):
         file_name, _ = QFileDialog.getOpenFileName(self, "Select Product Image", "", "Images (*.png *.jpg *.jpeg)")
         if file_name:
             self.input_image_path = file_name
-            pixmap = QPixmap(file_name).scaled(400, 400)
+            pixmap = QPixmap(file_name).scaled(500, 500)
             self.preview_label.setPixmap(pixmap)
 
     def customize(self):
@@ -59,7 +70,7 @@ class ProductCustomizerApp(QWidget):
         # Apply AI customization
         apply_customization(bg_removed_path, self.prompt_input.text(), final_image_path)
 
-        pixmap = QPixmap(final_image_path).scaled(400, 400)
+        pixmap = QPixmap(final_image_path).scaled(500, 500)
         self.preview_label.setPixmap(pixmap)
         QMessageBox.information(self, "Done", f"Customized product saved to {final_image_path}")
 
